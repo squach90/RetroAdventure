@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xn0kfwceyajq"
-path="res://.godot/imported/frame2(droite).png-eb07a5d11e8da1a2e77724c503b11415.ctex"
+uid="uid://cphemn3alcduj"
+path="res://.godot/imported/crown-coin.svg-4a1a510585cb4c7ee859570f744c9652.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/frame2(droite).png"
-dest_files=["res://.godot/imported/frame2(droite).png-eb07a5d11e8da1a2e77724c503b11415.ctex"]
+source_file="res://Sprite/Icone/crown-coin.svg"
+dest_files=["res://.godot/imported/crown-coin.svg-4a1a510585cb4c7ee859570f744c9652.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
