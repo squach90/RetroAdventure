@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddw4ojr4tpwd0"]
+
+[ext_resource type="Texture2D" uid="uid://bk4wpbjslvyx7" path="res://Sprite/Animation/simple(droit).png" id="1_go2xn"]
+[ext_resource type="Script" path="res://player.gd" id="1_x4j67"]
+[ext_resource type="Texture2D" uid="uid://4iycn6uito2j" path="res://Sprite/Animation/frame1(droite).png" id="2_lgun0"]
+[ext_resource type="Texture2D" uid="uid://yuub7wu1tout" path="res://Sprite/Animation/frame2(droite).png" id="3_7j27t"]
+[ext_resource type="Texture2D" uid="uid://dkjf2djtl6d3n" path="res://Sprite/Animation/simple(gauche).png" id="4_hms1w"]
+[ext_resource type="Texture2D" uid="uid://dby5nn38xd6cq" path="res://Sprite/Animation/frame1(gauche).png" id="5_6rfba"]
+[ext_resource type="Texture2D" uid="uid://csgug84c7v6oi" path="res://Sprite/Animation/frame2(gauche).png" id="6_f18ud"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8rnc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7j27t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_go2xn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lgun0")
+}],
+"loop": true,
+"name": &"droite",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hms1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6rfba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f18ud")
+}],
+"loop": true,
+"name": &"gauche",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_go2xn")
+}],
+"loop": true,
+"name": &"vide",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whr5q"]
+size = Vector2(12, 9.91376)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_x4j67")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_s8rnc")
+animation = &"vide"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.25)
+scale = Vector2(1, 1.26087)
+shape = SubResource("RectangleShape2D_whr5q")
