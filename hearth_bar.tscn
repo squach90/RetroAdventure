@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://co6npyvfua3ky"]
+
+[ext_resource type="Texture2D" uid="uid://cwnmgrc5ynv8r" path="res://UI/Hearts/PNG/health_bar/health_bar_decoration.png" id="1_8squs"]
+[ext_resource type="Script" path="res://hearth_bar.gd" id="1_8tdqy"]
+[ext_resource type="Texture2D" uid="uid://ovh58wltpwfy" path="res://UI/Hearts/PNG/health_bar/health_bar.png" id="2_hoaji"]
+
+[node name="HearthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8tdqy")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 73.0
+offset_bottom = 18.0
+value = 100.0
+texture_under = ExtResource("1_8squs")
+texture_progress = ExtResource("2_hoaji")
+texture_progress_offset = Vector2(14, 0)

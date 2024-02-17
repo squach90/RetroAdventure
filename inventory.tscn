@@ -157,9 +157,9 @@ metadata/_edit_use_anchors_ = true
 [node name="CoinBox" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 231.0
-offset_top = 6.0
+offset_top = 15.0
 offset_right = 367.0
-offset_bottom = 34.0
+offset_bottom = 43.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_y5nan")
 
 [node name="Panel" type="Panel" parent="CoinBox"]

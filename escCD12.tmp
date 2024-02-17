@@ -1,0 +1,214 @@
+[gd_scene load_steps=14 format=3 uid="uid://lp8b7a7s125j"]
+
+[ext_resource type="Texture2D" uid="uid://c4s25crppfmwm" path="res://UI/Panel/panel-009.png" id="1_dgdct"]
+[ext_resource type="Script" path="res://esc_menu.gd" id="1_i6ny4"]
+[ext_resource type="Texture2D" uid="uid://d0vggjdftcw0s" path="res://UI/Panel/panel-030.png" id="2_d7tjt"]
+[ext_resource type="FontFile" uid="uid://s0h15we0ncrc" path="res://Fonts/Minecraftia-Regular.ttf" id="3_bmtiy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xibr0"]
+texture = ExtResource("1_dgdct")
+texture_margin_left = 9.95912
+texture_margin_top = 9.66183
+texture_margin_right = 9.66183
+texture_margin_bottom = 9.81048
+region_rect = Rect2(-0.0806007, 0.18257, 47.8632, 47.7146)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3h27"]
+texture = ExtResource("2_d7tjt")
+texture_margin_left = 7.87811
+texture_margin_top = 7.87811
+texture_margin_right = 7.87811
+texture_margin_bottom = 7.87811
+modulate_color = Color(0.278431, 0.278431, 0.278431, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqjlp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_firfp"]
+texture = ExtResource("2_d7tjt")
+texture_margin_left = 8.02675
+texture_margin_top = 7.72947
+texture_margin_right = 7.87811
+texture_margin_bottom = 7.72947
+modulate_color = Color(0.278431, 0.278431, 0.278431, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_frb7c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ujs7"]
+texture = ExtResource("2_d7tjt")
+texture_margin_left = 7.58082
+texture_margin_top = 7.87811
+texture_margin_right = 7.72947
+texture_margin_bottom = 7.43218
+region_rect = Rect2(0.216686, 0.0683603, 47.7146, 47.5659)
+modulate_color = Color(0.278431, 0.278431, 0.278431, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2iq3g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6yod2"]
+texture = ExtResource("2_d7tjt")
+texture_margin_left = 8.1754
+texture_margin_top = 7.87811
+texture_margin_right = 7.87811
+texture_margin_bottom = 7.87811
+region_rect = Rect2(-0.229244, -0.0802832, 48.3092, 48.0119)
+modulate_color = Color(0.278431, 0.278431, 0.278431, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ha12h"]
+
+[node name="ESCMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_i6ny4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -104.0
+offset_right = 41.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xibr0")
+
+[node name="GoPanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -48.0
+offset_right = 33.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_y3h27")
+
+[node name="GoBtn" type="Button" parent="Panel/GoPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -12.5
+offset_right = 33.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_bmtiy")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cqjlp")
+text = "Reprendre"
+flat = true
+
+[node name="SavePanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 14.0
+offset_top = -11.0
+offset_right = 66.0
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_firfp")
+
+[node name="SaveBtn" type="Button" parent="Panel/SavePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -11.0
+offset_right = 16.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_bmtiy")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxTexture_frb7c")
+text = "Save"
+flat = true
+
+[node name="LoadPanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -11.0
+offset_right = -12.0
+offset_bottom = 21.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3ujs7")
+
+[node name="LoadBtn" type="Button" parent="Panel/LoadPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -11.0
+offset_right = 16.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_bmtiy")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2iq3g")
+text = "Load"
+flat = true
+
+[node name="QuitPanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.4951
+offset_top = -38.0
+offset_right = 28.4951
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6yod2")
+
+[node name="QuitBtn" type="Button" parent="Panel/QuitPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -9.5
+offset_right = 21.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_bmtiy")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ha12h")
+text = "Quitter"
+flat = true
+
+[connection signal="pressed" from="Panel/GoPanel/GoBtn" to="." method="_on_go_btn_pressed"]
+[connection signal="pressed" from="Panel/SavePanel/SaveBtn" to="." method="_on_save_btn_pressed"]
+[connection signal="pressed" from="Panel/LoadPanel/LoadBtn" to="." method="_on_load_btn_pressed"]
+[connection signal="pressed" from="Panel/QuitPanel/QuitBtn" to="." method="_on_quit_btn_pressed"]
