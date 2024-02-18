@@ -1,9 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://lp8b7a7s125j"]
+[gd_scene load_steps=17 format=3 uid="uid://lp8b7a7s125j"]
 
 [ext_resource type="Texture2D" uid="uid://c4s25crppfmwm" path="res://UI/Panel/panel-009.png" id="1_dgdct"]
 [ext_resource type="Script" path="res://esc_menu.gd" id="1_i6ny4"]
 [ext_resource type="Texture2D" uid="uid://d0vggjdftcw0s" path="res://UI/Panel/panel-030.png" id="2_d7tjt"]
 [ext_resource type="FontFile" uid="uid://s0h15we0ncrc" path="res://Fonts/Minecraftia-Regular.ttf" id="3_bmtiy"]
+[ext_resource type="PackedScene" uid="uid://cx4yjfhjn3b2u" path="res://click_03.tscn" id="5_b42o3"]
+[ext_resource type="PackedScene" uid="uid://ck1gd3ynh83tu" path="res://music.tscn" id="6_3ff64"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xibr0"]
 texture = ExtResource("1_dgdct")
@@ -230,7 +232,7 @@ offset_top = 11.0
 offset_right = 152.0
 offset_bottom = 27.0
 min_value = 1.0
-max_value = 50.0
+max_value = 10.0
 value = 1.0
 
 [node name="VolumeText" type="Label" parent="Option"]
@@ -289,8 +291,18 @@ D : Droit                     I : Inventaire
 Q: Gauche"
 metadata/_edit_use_anchors_ = true
 
+[node name="click_03" parent="." instance=ExtResource("5_b42o3")]
+
+[node name="music" parent="." instance=ExtResource("6_3ff64")]
+volume_db = -13.115
+
+[connection signal="mouse_entered" from="Panel/GoPanel/GoBtn" to="." method="_on_go_btn_mouse_entered"]
 [connection signal="pressed" from="Panel/GoPanel/GoBtn" to="." method="_on_go_btn_pressed"]
+[connection signal="mouse_entered" from="Panel/SavePanel/SaveBtn" to="." method="_on_save_btn_mouse_entered"]
 [connection signal="pressed" from="Panel/SavePanel/SaveBtn" to="." method="_on_save_btn_pressed"]
+[connection signal="mouse_entered" from="Panel/LoadPanel/LoadBtn" to="." method="_on_load_btn_mouse_entered"]
 [connection signal="pressed" from="Panel/LoadPanel/LoadBtn" to="." method="_on_load_btn_pressed"]
+[connection signal="mouse_entered" from="Panel/QuitPanel/QuitBtn" to="." method="_on_quit_btn_mouse_entered"]
 [connection signal="pressed" from="Panel/QuitPanel/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="mouse_entered" from="Option/Volume" to="." method="_on_volume_mouse_entered"]
 [connection signal="value_changed" from="Option/Volume" to="." method="_on_volume_value_changed"]

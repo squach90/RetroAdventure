@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx4yjfhjn3b2u"]
+
+[ext_resource type="AudioStream" uid="uid://gi4qw7phyftk" path="res://Musique/Interface-sounds/Audio/click_003.ogg" id="1_b865r"]
+
+[node name="click_03" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_b865r")
+volume_db = 6.041
+bus = &"sfx"

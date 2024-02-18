@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://detfo56m8005w"]
+[gd_scene load_steps=9 format=3 uid="uid://detfo56m8005w"]
 
 [ext_resource type="Script" path="res://title_screen.gd" id="1_u8e66"]
 [ext_resource type="Texture2D" uid="uid://cy3uu5oj26klx" path="res://UI/titlescreen.png" id="1_x0mfu"]
 [ext_resource type="Texture2D" uid="uid://doxq13u3v7v87" path="res://UI/Panel/panel-001.png" id="2_fleki"]
 [ext_resource type="FontFile" uid="uid://s0h15we0ncrc" path="res://Fonts/Minecraftia-Regular.ttf" id="3_40ok5"]
+[ext_resource type="PackedScene" uid="uid://cx4yjfhjn3b2u" path="res://click_03.tscn" id="5_76572"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ik003"]
 texture = ExtResource("1_x0mfu")
@@ -192,6 +193,11 @@ theme_override_font_sizes/font_size = 8
 text = "2024-2025
 "
 
+[node name="click_03" parent="." instance=ExtResource("5_76572")]
+
+[connection signal="mouse_entered" from="Panel/QuitPanel/QuitBtn" to="." method="_on_quit_btn_mouse_entered"]
 [connection signal="pressed" from="Panel/QuitPanel/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="mouse_entered" from="Panel/PlayPanel/PlayBtn" to="." method="_on_play_btn_mouse_entered"]
 [connection signal="pressed" from="Panel/PlayPanel/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="mouse_entered" from="Panel/LoadPanel/LoadBtn" to="." method="_on_load_btn_mouse_entered"]
 [connection signal="pressed" from="Panel/LoadPanel/LoadBtn" to="." method="_on_load_btn_pressed"]

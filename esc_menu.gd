@@ -1,12 +1,17 @@
 extends Control
 
+@export var bus_name: String
+@export var bus_index: int
+
 const SAVE_FILE = "user://savefile.dat"
+@onready var click = $click_03
+@onready var music = $music
 var data = {}
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	bus_index = AudioServer.get_bus_index(bus_name) # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,6 +26,9 @@ func _process(delta):
 			save_data()
 	print(player.position)
 	print(coin)
+	if self.visible == true:
+		get_node("../Inventory").visible = false
+	
 	
 
 
@@ -80,4 +88,26 @@ func _on_load_btn_pressed():
 
 
 func _on_volume_value_changed(value):
-	get_node("Option/VolumeText").text = str(value) + "%"# Replace with function body.
+	get_node("Option/VolumeText").text = str(value) + "0%"# Replace with function body.
+	click.volume_db = 1
+	music.volume_db = value
+	
+
+func _on_go_btn_mouse_entered():
+	click.play() # Replace with function body.
+
+
+func _on_save_btn_mouse_entered():
+	click.play() # Replace with function body.
+
+
+func _on_load_btn_mouse_entered():
+	click.play() # Replace with function body.
+
+
+func _on_quit_btn_mouse_entered():
+	click.play() # Replace with function body.
+
+
+func _on_volume_mouse_entered():
+	click.play() # Replace with function body.

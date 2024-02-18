@@ -1,5 +1,6 @@
 extends Control
-
+@onready var click = $click_03
+@onready var game_over = $"Game-Over"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,3 +14,8 @@ func _process(delta):
 
 func _on_quit_btn_pressed():
 	get_tree().quit() # Replace with function body.
+
+
+func _on_quit_btn_mouse_entered():
+	click.play()
+	game_over.play() # Replace with function body.
