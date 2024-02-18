@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf6yxrwo7lqu0"]
+
+[ext_resource type="Script" path="res://dirt_chateau_teleporte.gd" id="1_gh867"]
+[ext_resource type="Texture2D" uid="uid://d24mc6dphpfwf" path="res://Sprite/dirt.png" id="1_mdxpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcogn"]
+size = Vector2(16, 16)
+
+[node name="Dirt_chateau_teleporte" type="Area2D"]
+script = ExtResource("1_gh867")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mdxpr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lcogn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

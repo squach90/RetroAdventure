@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://jv3svh2d8nnf"]
+
+[ext_resource type="Script" path="res://dirt_chateau_retour.gd" id="1_5u1l4"]
+[ext_resource type="Texture2D" uid="uid://d24mc6dphpfwf" path="res://Sprite/dirt.png" id="1_ute5m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbv8l"]
+size = Vector2(16, 16)
+
+[node name="Dirt_chateau_retour" type="Area2D"]
+script = ExtResource("1_5u1l4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ute5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nbv8l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

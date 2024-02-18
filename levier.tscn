@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbmaitahb05dy"]
+
+[ext_resource type="Script" path="res://levier.gd" id="1_5rvsy"]
+[ext_resource type="Texture2D" uid="uid://btn43y53rn5rm" path="res://Sprite/levier.png" id="1_8gl7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vyus"]
+size = Vector2(16, 22)
+
+[node name="Levier" type="Area2D"]
+script = ExtResource("1_5rvsy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8gl7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_0vyus")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
