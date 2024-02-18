@@ -24,3 +24,5 @@ Vous pouvez trouver les Release
 [sur cette page](https://github.com/squach90/RetroAdventure/releases/tag/Release).
 
 Bonne partie 😀😉
+
+![imagepromo](https://github.com/squach90/RetroAdventure/assets/160175686/9948114d-c419-4770-ba04-0547c55c70c3)
