@@ -25,4 +25,4 @@ Vous pouvez trouver les Release
 
 Bonne partie 😀😉
 
-![imagepromo](https://github.com/squach90/RetroAdventure/assets/160175686/9948114d-c419-4770-ba04-0547c55c70c3)
+![db2180ef-1784-4ba1-a52c-5b32996c9fbb](https://github.com/squach90/RetroAdventure/assets/160175686/09290ee0-0af6-422a-b2a0-0c542004e23e)
