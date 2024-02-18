@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dej4qiwicbtin"]
+[gd_scene load_steps=29 format=3 uid="uid://dej4qiwicbtin"]
 
 [ext_resource type="Texture2D" uid="uid://b5h4we8f5t5xq" path="res://Tilemap/City_TileMap.png" id="1_gc83q"]
 [ext_resource type="Texture2D" uid="uid://bjlx1k67e2pkl" path="res://Tilemap/Dungeons_TileMap.png" id="2_3pu2n"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bf6yxrwo7lqu0" path="res://dirt_chateau_teleporte.tscn" id="14_jqt7v"]
 [ext_resource type="PackedScene" uid="uid://jv3svh2d8nnf" path="res://dirt_chateau_retour.tscn" id="15_gctiq"]
 [ext_resource type="PackedScene" uid="uid://m13p03u2gvr2" path="res://grand_monstre.tscn" id="16_g4lsf"]
+[ext_resource type="PackedScene" uid="uid://nj2x3mwspk6r" path="res://grand_monstre1.tscn" id="17_6cb05"]
 [ext_resource type="PackedScene" uid="uid://wra573awcmnl" path="res://ennemies.tscn" id="18_nxplp"]
 [ext_resource type="PackedScene" uid="uid://bp76odxex7wxq" path="res://combat.tscn" id="22_h30oa"]
 
@@ -1033,13 +1034,13 @@ position = Vector2(-400, 376)
 position = Vector2(4161, 1505)
 
 [node name="Grand_monstre" parent="." instance=ExtResource("16_g4lsf")]
-position = Vector2(7891, 1558)
+position = Vector2(7889, 1569)
 
-[node name="Grand_monstre2" parent="." instance=ExtResource("16_g4lsf")]
-position = Vector2(8134, 1557)
+[node name="Grand_monstre1" parent="." instance=ExtResource("17_6cb05")]
+position = Vector2(8140, 1565)
 
 [node name="Combat" parent="." instance=ExtResource("22_h30oa")]
-offset_left = 7924.0
+offset_left = 7910.0
 offset_top = 1583.0
 offset_right = 8153.0
 offset_bottom = 1748.0

@@ -9,6 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print(get_node("../Combat").selected_mob)
 	$ProgressBar.value = health
 	if health == 0 or health <= 0:
 		self.queue_free()
@@ -18,6 +19,7 @@ func _process(delta):
 		get_node("../Player").position = Vector2(0, 14)
 
 
-func _on_button_pressed():
-	get_node("../Combat").selected_mob = 1
-	
+
+func _on_button_1_pressed():
+	get_node("../Combat").selected_mob = 2
+
