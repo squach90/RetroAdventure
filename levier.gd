@@ -20,9 +20,10 @@ func _on_body_entered(body):
 		 # Replace with function body.
 
 func _on_body_exited(body):
-	get_node("../Dirt_chateau").queue_free()
-	get_node("../Dirt_chateau_teleporte").monitoring = true
-	get_node("../Player/Camera2D/Inventory").text_msg.text = "" # Replace with function body. # Replace with function body.
-	get_node("../Player/Camera2D/Inventory").msg_box.visible = false
-	get_node("../Player/Camera2D/Inventory").perso_panel.visible = true
-	get_node("../Player/Camera2D/Inventory").coins_box.visible = true
+	if body.name == "Player":
+		get_node("../Dirt_chateau").queue_free()
+		get_node("../Dirt_chateau_teleporte").monitoring = true
+		get_node("../Player/Camera2D/Inventory").text_msg.text = "" # Replace with function body. # Replace with function body.
+		get_node("../Player/Camera2D/Inventory").msg_box.visible = false
+		get_node("../Player/Camera2D/Inventory").perso_panel.visible = true
+		get_node("../Player/Camera2D/Inventory").coins_box.visible = true

@@ -173,7 +173,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_40ok5")
 theme_override_font_sizes/font_size = 8
-text = "Louis Lesniak"
+text = "Louis Lesniak ©"
 
 [node name="Date" type="Label" parent="Panel"]
 layout_mode = 1

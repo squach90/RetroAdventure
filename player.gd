@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var speed = 100
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var can_move = true
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -24,5 +25,7 @@ func get_input():
 		speed = 100
 
 func _physics_process(delta):
-	move_and_slide()
-	get_input()
+	print(can_move)
+	if can_move == true:
+		move_and_slide()
+		get_input()

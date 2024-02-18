@@ -1,0 +1,465 @@
+[gd_scene load_steps=24 format=3 uid="uid://bp76odxex7wxq"]
+
+[ext_resource type="Script" path="res://combat.gd" id="1_2whmu"]
+[ext_resource type="Texture2D" uid="uid://c4s25crppfmwm" path="res://UI/Panel/panel-009.png" id="1_8iysj"]
+[ext_resource type="Texture2D" uid="uid://yloaxbun1chq" path="res://Sprite/Icone/dripping-sword.svg" id="2_5beok"]
+[ext_resource type="Texture2D" uid="uid://coy5nsh5weppr" path="res://Sprite/Icone/spell-book.svg" id="3_jk3bi"]
+[ext_resource type="Texture2D" uid="uid://dqua45xv42kna" path="res://Sprite/Icone/exit-door.svg" id="4_q04ca"]
+[ext_resource type="Texture2D" uid="uid://bjhqsroa4v5rl" path="res://UI/Panel/panel-013.png" id="5_h4d2t"]
+[ext_resource type="FontFile" uid="uid://s0h15we0ncrc" path="res://Fonts/Minecraftia-Regular.ttf" id="6_yvnjd"]
+[ext_resource type="Texture2D" uid="uid://doeqawdhvnnxp" path="res://Sprite/Icone/unlit-bomb.svg" id="7_a6gt5"]
+[ext_resource type="Texture2D" uid="uid://dml3uqcg4cni0" path="res://Sprite/Icone/thunder-skull.svg" id="8_uw1xl"]
+[ext_resource type="Texture2D" uid="uid://ct6815otwn3vo" path="res://Sprite/Icone/lion.svg" id="9_a0xmo"]
+[ext_resource type="Texture2D" uid="uid://sm3dudf34ljq" path="res://Sprite/Icone/life-bar.svg" id="10_sdulb"]
+[ext_resource type="Texture2D" uid="uid://w7wr8efkcahf" path="res://Sprite/Icone/poison-bottle.svg" id="11_omkg3"]
+[ext_resource type="Texture2D" uid="uid://decx2rh6oyju3" path="res://Sprite/Icone/sunrise.svg" id="12_y7vxn"]
+[ext_resource type="PackedScene" uid="uid://co6npyvfua3ky" path="res://hearth_bar.tscn" id="14_rai10"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3nfp"]
+texture = ExtResource("1_8iysj")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xcx0y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hewdp"]
+texture = ExtResource("1_8iysj")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6t26l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4pi8s"]
+texture = ExtResource("1_8iysj")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p4lqv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t4vmk"]
+texture = ExtResource("5_h4d2t")
+texture_margin_left = 11.752
+texture_margin_top = 11.9696
+texture_margin_right = 11.752
+texture_margin_bottom = 11.752
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6y2b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_boykv"]
+texture = ExtResource("5_h4d2t")
+texture_margin_left = 11.9696
+texture_margin_top = 11.752
+texture_margin_right = 11.752
+texture_margin_bottom = 11.9696
+
+[node name="Combat" type="Control"]
+layout_mode = 3
+anchor_right = 0.292
+anchor_bottom = 0.255
+offset_right = -0.384033
+offset_bottom = -0.240021
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2whmu")
+
+[node name="AttackPnl" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.116071
+anchor_top = 0.90303
+anchor_right = 0.116071
+anchor_bottom = 0.90303
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_x3nfp")
+metadata/_edit_use_anchors_ = true
+
+[node name="AttackBtn" type="Button" parent="AttackPnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xcx0y")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="AttackPnl/AttackBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -11.0
+offset_right = 11.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5beok")
+expand_mode = 1
+
+[node name="MagicPnl" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = 26.0
+offset_right = 19.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hewdp")
+
+[node name="MagicBtn" type="Button" parent="MagicPnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.5
+offset_right = 20.0
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6t26l")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="MagicPnl/MagicBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -12.5
+offset_right = 13.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_jk3bi")
+expand_mode = 1
+
+[node name="QuitPnl" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.883929
+anchor_top = 0.90303
+anchor_right = 0.883929
+anchor_bottom = 0.90303
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4pi8s")
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitBtn" type="Button" parent="QuitPnl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.5
+offset_top = -16.0
+offset_right = 18.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p4lqv")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="QuitPnl/QuitBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -14.5
+offset_right = 14.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_q04ca")
+expand_mode = 1
+
+[node name="Attack" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -24.0
+offset_right = 62.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_t4vmk")
+
+[node name="Label" type="Label" parent="Attack"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 5.0
+offset_right = 20.0
+offset_bottom = 19.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_yvnjd")
+theme_override_font_sizes/font_size = 8
+text = "Attaque"
+
+[node name="BombBtn" type="Button" parent="Attack"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = -6.0
+offset_right = 43.0
+offset_bottom = 18.0
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6y2b")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Attack/BombBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -11.5
+offset_right = 12.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_a6gt5")
+expand_mode = 1
+
+[node name="ThunderBtn" type="Button" parent="Attack"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -5.0
+offset_right = 12.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6y2b")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Attack/ThunderBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -11.5
+offset_right = 12.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_uw1xl")
+expand_mode = 1
+
+[node name="LionBtn" type="Button" parent="Attack"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = -5.5
+offset_right = 47.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6y2b")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Attack/LionBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -11.5
+offset_right = 12.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_a0xmo")
+expand_mode = 1
+
+[node name="Magic" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -24.0
+offset_right = 62.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_boykv")
+
+[node name="Label" type="Label" parent="Magic"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -13.0
+offset_top = 5.0
+offset_right = 13.0
+offset_bottom = 19.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_yvnjd")
+theme_override_font_sizes/font_size = 8
+text = "Magie"
+
+[node name="LifeBtn" type="Button" parent="Magic"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = -6.0
+offset_right = 43.0
+offset_bottom = 18.0
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6y2b")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Magic/LifeBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -11.5
+offset_right = 12.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_sdulb")
+expand_mode = 1
+
+[node name="PoisonBtn" type="Button" parent="Magic"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -5.0
+offset_right = 12.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6y2b")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Magic/PoisonBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -11.5
+offset_right = 12.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_omkg3")
+expand_mode = 1
+
+[node name="SunBtn" type="Button" parent="Magic"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = -5.5
+offset_right = 47.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6y2b")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Magic/SunBtn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -11.5
+offset_right = 12.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_y7vxn")
+expand_mode = 1
+
+[node name="HearthBar" parent="." instance=ExtResource("14_rai10")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0714286
+anchor_top = 0.478788
+anchor_right = 0.0714286
+anchor_bottom = 0.478788
+offset_right = 67.0
+offset_bottom = 17.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="AttackPnl/AttackBtn" to="." method="_on_attack_btn_pressed"]
+[connection signal="pressed" from="MagicPnl/MagicBtn" to="." method="_on_magic_btn_pressed"]
+[connection signal="pressed" from="QuitPnl/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="Attack/BombBtn" to="." method="_on_bomb_btn_pressed"]
+[connection signal="pressed" from="Attack/ThunderBtn" to="." method="_on_thunder_btn_pressed"]
+[connection signal="pressed" from="Attack/LionBtn" to="." method="_on_lion_btn_pressed"]
+[connection signal="pressed" from="Magic/LifeBtn" to="." method="_on_life_btn_pressed"]
+[connection signal="pressed" from="Magic/PoisonBtn" to="." method="_on_poison_btn_pressed"]
+[connection signal="pressed" from="Magic/SunBtn" to="." method="_on_sun_btn_pressed"]
