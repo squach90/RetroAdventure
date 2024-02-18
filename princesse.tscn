@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgo2636b0k0kc"]
+
+[ext_resource type="Script" path="res://princesse.gd" id="1_7ycl4"]
+[ext_resource type="Texture2D" uid="uid://0oik1tvikicy" path="res://Sprite/princesse.png" id="1_t25xw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_at52i"]
+size = Vector2(16, 16)
+
+[node name="Princesse" type="Area2D"]
+script = ExtResource("1_7ycl4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t25xw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_at52i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

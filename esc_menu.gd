@@ -77,3 +77,7 @@ func _on_save_btn_pressed():
 
 func _on_load_btn_pressed():
 	load_data() # Replace with function body.
+
+
+func _on_volume_value_changed(value):
+	get_node("Option/VolumeText").text = str(value) + "%"# Replace with function body.

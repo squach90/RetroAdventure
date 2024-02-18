@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://w2hvlvutskpo"]
+
+[ext_resource type="Texture2D" uid="uid://db88lywa8r1pg" path="res://Sprite/mage.png" id="1_aovqd"]
+[ext_resource type="Script" path="res://mage.gd" id="1_f7tgf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7rny"]
+size = Vector2(16, 16)
+
+[node name="mage" type="Area2D"]
+script = ExtResource("1_f7tgf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aovqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i7rny")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

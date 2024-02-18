@@ -1,0 +1,197 @@
+[gd_scene load_steps=8 format=3 uid="uid://detfo56m8005w"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_u8e66"]
+[ext_resource type="Texture2D" uid="uid://cy3uu5oj26klx" path="res://UI/titlescreen.png" id="1_x0mfu"]
+[ext_resource type="Texture2D" uid="uid://doxq13u3v7v87" path="res://UI/Panel/panel-001.png" id="2_fleki"]
+[ext_resource type="FontFile" uid="uid://s0h15we0ncrc" path="res://Fonts/Minecraftia-Regular.ttf" id="3_40ok5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ik003"]
+texture = ExtResource("1_x0mfu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1niu"]
+texture = ExtResource("2_fleki")
+texture_margin_left = 10.0109
+texture_margin_top = 10.0109
+texture_margin_right = 10.0109
+texture_margin_bottom = 10.0109
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s4ak0"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchor_right = 0.437
+anchor_bottom = 0.341
+offset_right = -0.424011
+offset_bottom = 0.0319824
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8e66")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -204.0
+offset_top = -129.5
+offset_right = 204.0
+offset_bottom = 129.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ik003")
+
+[node name="QuitPanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -92.0
+offset_right = 52.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_e1niu")
+
+[node name="QuitBtn" type="Button" parent="Panel/QuitPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -17.5
+offset_right = 51.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_40ok5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s4ak0")
+text = "Quitter"
+flat = true
+
+[node name="PlayPanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.332046
+anchor_right = 0.5
+anchor_bottom = 0.332046
+offset_left = -52.0
+offset_right = 52.0
+offset_bottom = 37.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_e1niu")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayBtn" type="Button" parent="Panel/PlayPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -18.0
+offset_right = 51.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_40ok5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s4ak0")
+text = "Jouer"
+flat = true
+
+[node name="LoadPanel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -3.5
+offset_right = 52.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_e1niu")
+
+[node name="LoadBtn" type="Button" parent="Panel/LoadPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -18.0
+offset_right = 51.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_40ok5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s4ak0")
+text = "Charger"
+flat = true
+
+[node name="Name" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 30.0
+offset_right = 120.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_40ok5")
+theme_override_font_sizes/font_size = 24
+text = "RetroAdventure"
+
+[node name="Creator" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = -32.0
+offset_right = -18.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_40ok5")
+theme_override_font_sizes/font_size = 8
+text = "Louis Lesniak"
+
+[node name="Date" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -32.0
+offset_right = -330.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_40ok5")
+theme_override_font_sizes/font_size = 8
+text = "2024-2025
+"
+
+[connection signal="pressed" from="Panel/QuitPanel/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="Panel/PlayPanel/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Panel/LoadPanel/LoadBtn" to="." method="_on_load_btn_pressed"]
