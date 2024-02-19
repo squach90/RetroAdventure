@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dej4qiwicbtin"]
+[gd_scene load_steps=30 format=3 uid="uid://dej4qiwicbtin"]
 
 [ext_resource type="Texture2D" uid="uid://b5h4we8f5t5xq" path="res://Tilemap/City_TileMap.png" id="1_gc83q"]
 [ext_resource type="Texture2D" uid="uid://bjlx1k67e2pkl" path="res://Tilemap/Dungeons_TileMap.png" id="2_3pu2n"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://nj2x3mwspk6r" path="res://grand_monstre1.tscn" id="17_6cb05"]
 [ext_resource type="PackedScene" uid="uid://wra573awcmnl" path="res://ennemies.tscn" id="18_nxplp"]
 [ext_resource type="PackedScene" uid="uid://bp76odxex7wxq" path="res://combat.tscn" id="22_h30oa"]
+[ext_resource type="PackedScene" uid="uid://dn1jhc8wkilq0" path="res://commerce.tscn" id="26_sjc0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ua23p"]
 texture = ExtResource("1_gc83q")
@@ -1062,6 +1063,13 @@ offset_left = -197.0
 offset_top = -98.0
 offset_right = -98.0
 offset_bottom = -23.0
+
+[node name="Commerce" parent="Player/Camera2D" instance=ExtResource("26_sjc0a")]
+visible = false
+offset_left = -0.0879975
+offset_top = -0.0560074
+offset_right = -0.0879975
+offset_bottom = -0.0560074
 
 [node name="HearthBar" parent="Player/Camera2D" instance=ExtResource("6_vmeut")]
 offset_left = 114.0

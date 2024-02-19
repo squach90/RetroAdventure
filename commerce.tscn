@@ -1,0 +1,141 @@
+[gd_scene load_steps=11 format=3 uid="uid://dn1jhc8wkilq0"]
+
+[ext_resource type="Script" path="res://commerce.gd" id="1_lw56s"]
+[ext_resource type="Texture2D" uid="uid://cjxvvhyoopi4e" path="res://UI/Panel/panel-015.png" id="1_x5jpl"]
+[ext_resource type="FontFile" uid="uid://s0h15we0ncrc" path="res://Fonts/Minecraftia-Regular.ttf" id="2_udvin"]
+[ext_resource type="Texture2D" uid="uid://sm3dudf34ljq" path="res://Sprite/Icone/life-bar.svg" id="3_cmkle"]
+[ext_resource type="Texture2D" uid="uid://cbe47d86doffe" path="res://Sprite/Icone/key.svg" id="4_ygrix"]
+[ext_resource type="Texture2D" uid="uid://b6h6tn1ba2y2i" path="res://Sprite/Icone/treasure-map.svg" id="5_kpvxr"]
+[ext_resource type="Texture2D" uid="uid://c4s25crppfmwm" path="res://UI/Panel/panel-009.png" id="7_r1upq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dy2v"]
+texture = ExtResource("1_x5jpl")
+texture_margin_left = 7.96577
+texture_margin_top = 7.96577
+texture_margin_right = 7.96577
+texture_margin_bottom = 8.60303
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw4mp"]
+bg_color = Color(0.447059, 0.447059, 0.447059, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xym2"]
+texture = ExtResource("7_r1upq")
+texture_margin_left = 10.2286
+texture_margin_top = 10.2286
+texture_margin_right = 10.2286
+texture_margin_bottom = 10.2286
+
+[node name="Commerce" type="Control"]
+layout_mode = 3
+anchor_right = 0.238
+anchor_bottom = 0.244
+offset_right = -0.175995
+offset_bottom = -0.112015
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lw56s")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -63.0
+offset_right = 87.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7dy2v")
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 6.0
+offset_right = 32.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_udvin")
+theme_override_font_sizes/font_size = 8
+text = " Heroes Shop"
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_udvin")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_mw4mp")
+item_count = 3
+icon_scale = 1.5
+fixed_icon_size = Vector2i(10, 10)
+item_0/text = " +10% VIE :                   3 coins"
+item_0/icon = ExtResource("3_cmkle")
+item_1/text = " Clé du chateau :    4 coins"
+item_1/icon = ExtResource("4_ygrix")
+item_2/text = " Carte de Tp :            5 coins"
+item_2/icon = ExtResource("5_kpvxr")
+
+[node name="NoMoney" type="Panel" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -20.0
+offset_right = 74.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6xym2")
+
+[node name="Label" type="Label" parent="Panel/NoMoney"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -11.0
+offset_right = 66.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("2_udvin")
+theme_override_font_sizes/font_size = 8
+text = "     Vous n'avez pas assez 
+d'argent pour acheter cela"
+
+[node name="Quit" type="Button" parent="Panel/NoMoney"]
+layout_mode = 1
+offset_left = -6.0
+offset_top = -20.0
+offset_right = 7994.0
+offset_bottom = 4630.0
+scale = Vector2(0.02, 0.02)
+flat = true
+
+[connection signal="item_selected" from="Panel/ItemList" to="." method="_on_item_list_item_selected"]
+[connection signal="pressed" from="Panel/NoMoney/Quit" to="." method="_on_quit_pressed"]
