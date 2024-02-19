@@ -17,9 +17,9 @@ func _process(delta):
 		get_node("../Player").visible = true
 		get_node("../Player/Camera2D/Inventory").coins_value += 5
 		get_node("../Player").position = Vector2(0, 14)
+		get_node("../Combat").number_of_use = 3
 
 
 
-func _on_button_1_pressed():
+func _on_button_pressed():
 	get_node("../Combat").selected_mob = 2
-

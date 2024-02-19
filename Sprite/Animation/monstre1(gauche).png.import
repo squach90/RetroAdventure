@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3ada68wy4iqf"
-path="res://.godot/imported/monstre.png-5a60029e11f0931e68fd08b582411b9a.ctex"
+uid="uid://ckc8cvv4pyea7"
+path="res://.godot/imported/monstre1(gauche).png-823a9b0018c5966d78b5f413633c476a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/monstre.png"
-dest_files=["res://.godot/imported/monstre.png-5a60029e11f0931e68fd08b582411b9a.ctex"]
+source_file="res://Sprite/Animation/monstre1(gauche).png"
+dest_files=["res://.godot/imported/monstre1(gauche).png-823a9b0018c5966d78b5f413633c476a.ctex"]
 
 [params]
 

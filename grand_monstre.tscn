@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://m13p03u2gvr2"]
 
-[ext_resource type="Texture2D" uid="uid://b3ada68wy4iqf" path="res://Sprite/monstre.png" id="1_7utnj"]
+[ext_resource type="Texture2D" uid="uid://b3ada68wy4iqf" path="res://Sprite/Animation/monstre.png" id="1_7utnj"]
 [ext_resource type="Script" path="res://grand_monstre.gd" id="1_y3lx2"]
 [ext_resource type="Texture2D" uid="uid://d4au7db5re0l3" path="res://Sprite/select.png" id="2_0u746"]
 
