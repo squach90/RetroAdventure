@@ -15,6 +15,9 @@ func _process(delta):
 		TP_Carte()
 	if Input.is_action_just_pressed("Money -"):
 		coins -= 1
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_node("../../../Player").can_move = true
+	
 
 
 func _on_item_list_item_selected(index):

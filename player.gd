@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var speed = 100
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var can_move = true
+@onready var can_move = null
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")

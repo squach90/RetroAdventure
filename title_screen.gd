@@ -3,7 +3,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	get_node("../../../Player").can_move = false
+	$Panel/PlayPanel/PlayBtn.grab_focus() # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,6 +13,7 @@ func _process(delta):
 
 
 func _on_play_btn_pressed():
+	get_node("../../../Player").can_move = true
 	self.visible = false # Replace with function body.
 
 

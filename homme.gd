@@ -12,11 +12,13 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.name == "Player":
+		get_node("../Player/Camera2D/Commerce/Panel/ItemList").grab_focus()
 		get_node("../Player/Camera2D/Commerce").visible = true
-		
+		get_node("../Player").can_move = false
 
 func _on_body_exited(body):
 	if body.name == "Player":
+		
 		get_node("../Player/Camera2D/Commerce").visible = false
 		get_node("../Player/Camera2D/Inventory").text_msg.text = "" # Replace with function body. # Replace with function body.
 		get_node("../Player/Camera2D/Inventory").msg_box.visible = false

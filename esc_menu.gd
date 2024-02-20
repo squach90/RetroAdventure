@@ -43,6 +43,7 @@ func save_data():
 	var player = get_node("../../../Player")
 	var player_pos = get_node("../../../Player").position
 	var coin = get_node("../../../Player/Camera2D/Inventory").coins_value
+	var carte = get_node("../../../Player/Camera2D/Commerce").carte_have
 	var life = get_node("../../../Player/Camera2D/HearthBar").health
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
 	data = {
@@ -50,6 +51,7 @@ func save_data():
 		"PosX" = player_pos.x,
 		"coins" = coin,
 		"life" = life,
+		"carte_have" = carte,
 	}
 	file.store_var(data)
 	file = null
@@ -59,6 +61,7 @@ func load_data():
 	var player = get_node("../../../Player")
 	var player_pos = get_node("../../../Player").position
 	var coin = get_node("../../../Player/Camera2D/Inventory").coins_value
+	var carte = get_node("../../../Player/Camera2D/Commerce").carte_have
 	var life = get_node("../../../Player/Camera2D/HearthBar").health
 	print(coin)
 	if not FileAccess.file_exists(SAVE_FILE):
@@ -67,12 +70,14 @@ func load_data():
 			"PosX" = player_pos.x,
 			"coins" = coin,
 			"Life" = life,
+			"carte_have" = carte,
 		}
 		save_data()
 	var file = FileAccess.open(SAVE_FILE, FileAccess.READ)
 	data = file.get_var()
 	get_node("../../../Player").position.x = data.PosX
 	get_node("../../../Player").position.y = data.PosY
+	get_node("../../../Player/Camera2D/Commerce").carte_have = data.carte_have
 	get_node("../../../Player/Camera2D/Inventory").coins_value = data.coins
 	get_node("../../../Player/Camera2D/HearthBar").health = data.life
 	file = null
