@@ -17,6 +17,13 @@ func _process(delta):
 		coins -= 1
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_node("../../../Player").can_move = true
+		get_node("Panel").visible = !get_node("Panel").visible
+	if cle_have == true:
+		if has_node("../../../Dirt_chateau") and is_instance_valid(get_node("../../../Dirt_chateau")):
+			get_node("../../../Dirt_chateau").monitoring = false
+		else:
+			pass
+		get_node("../../../Dirt_chateau_teleporte").monitoring = true
 	
 
 
@@ -37,7 +44,7 @@ func _on_item_list_item_selected(index):
 			if coins == 4 or coins >= 4:
 				print("Clé du chateau acheté")
 				cle_have = true
-				##FIXME: Faire disparraitre le dirt du chateau
+
 				get_node("../Inventory").coins_value -= 4
 			else :
 				get_node("Panel/NoMoney").visible = !get_node("Panel/NoMoney").visible
