@@ -5,11 +5,16 @@ extends Control
 func _ready():
 	get_node("../../../Player").can_move = false
 	$Panel/PlayPanel/PlayBtn.grab_focus() # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	DisplayServer.window_get_size()
+	get_viewport().get_visible_rect().size
+	
+	
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("toggle_fullscreen"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 
 func _on_play_btn_pressed():
