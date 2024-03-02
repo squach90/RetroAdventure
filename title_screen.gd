@@ -5,8 +5,6 @@ extends Control
 func _ready():
 	get_node("../../../Player").can_move = false
 	$Panel/PlayPanel/PlayBtn.grab_focus() # Replace with function body.
-	DisplayServer.window_get_size()
-	get_viewport().get_visible_rect().size
 	
 	
 func _process(delta):

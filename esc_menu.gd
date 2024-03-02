@@ -28,7 +28,7 @@ func _process(delta):
 	print(coin)
 	if self.visible == true:
 		get_node("../Inventory").visible = false
-	
+
 	
 
 
