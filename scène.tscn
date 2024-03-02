@@ -1058,9 +1058,9 @@ zoom = Vector2(5, 5)
 rotation_smoothing_enabled = true
 
 [node name="Inventory" parent="Player/Camera2D" instance=ExtResource("4_xfio8")]
-offset_left = -183.0
+offset_left = -194.0
 offset_top = -95.0
-offset_right = 199.0
+offset_right = 188.0
 offset_bottom = 101.0
 
 [node name="Commerce" parent="Player/Camera2D" instance=ExtResource("26_sjc0a")]
@@ -1073,10 +1073,10 @@ offset_bottom = -55.0
 anchors_preset = 1
 anchor_left = 1.0
 anchor_bottom = 0.0
-offset_left = 121.0
-offset_top = -100.0
-offset_right = 191.0
-offset_bottom = -86.0
+offset_left = 107.0
+offset_top = -99.0
+offset_right = 177.0
+offset_bottom = -85.0
 grow_horizontal = 0
 grow_vertical = 1
 

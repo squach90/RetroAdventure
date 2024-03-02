@@ -25,6 +25,15 @@ func get_input():
 		speed = 100
 
 func _physics_process(delta):
+	var screen_size = DisplayServer.window_get_size()
+	print(DisplayServer.window_get_size())
+	
+	if screen_size.x == 1920 and screen_size.y == 1080 or screen_size.x <= 1920 and screen_size.y <= 1080:
+		get_node("../Player/Camera2D").zoom = Vector2(5,5)
+		print(screen_size)
+	if screen_size.x == 1280 and screen_size.y == 720 or screen_size.x <= 1280 and screen_size.y <= 720:
+		get_node("../Player/Camera2D").zoom = Vector2(3.5,3.5)
+		print(screen_size)
 	print(can_move)
 	if can_move == true:
 		move_and_slide()

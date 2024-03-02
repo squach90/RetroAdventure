@@ -8,6 +8,20 @@ func _ready():
 	
 	
 func _process(delta):
+	var screen_size = DisplayServer.window_get_size()
+	print(DisplayServer.window_get_size())
+	
+	if screen_size.x == 1920 and screen_size.y == 1080 or screen_size.x <= 1920 and screen_size.y <= 1080:
+		get_node("../../Camera2D").zoom = Vector2(5,5)
+		print(screen_size)
+	if screen_size.x == 1280 and screen_size.y == 720 or screen_size.x <= 1280 and screen_size.y <= 720:
+		get_node("../../Camera2D").zoom = Vector2(3.5,3.5)
+		print(screen_size)
+	if screen_size.x == 800 and screen_size.y == 600 or screen_size.x <= 800 and screen_size.y <= 600:
+		get_node("../../Camera2D").zoom = Vector2(2.2,2.2)
+		print(screen_size)
+	
+		
 	if Input.is_action_just_pressed("toggle_fullscreen"):
 		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
