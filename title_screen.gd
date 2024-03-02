@@ -11,6 +11,9 @@ func _process(delta):
 	var screen_size = DisplayServer.window_get_size()
 	print(DisplayServer.window_get_size())
 	
+	if screen_size.x == 2560 and screen_size.y == 1440 or screen_size.x <= 2560 and screen_size.y <= 1440:
+		get_node("../../Camera2D").zoom = Vector2(6.75,6.75)
+		print(screen_size)
 	if screen_size.x == 1920 and screen_size.y == 1080 or screen_size.x <= 1920 and screen_size.y <= 1080:
 		get_node("../../Camera2D").zoom = Vector2(5,5)
 		print(screen_size)
