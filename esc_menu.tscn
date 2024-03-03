@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://lp8b7a7s125j"]
+[gd_scene load_steps=21 format=3 uid="uid://lp8b7a7s125j"]
 
 [ext_resource type="Texture2D" uid="uid://c4s25crppfmwm" path="res://UI/Panel/panel-009.png" id="1_dgdct"]
 [ext_resource type="Script" path="res://esc_menu.gd" id="1_i6ny4"]
@@ -6,6 +6,10 @@
 [ext_resource type="FontFile" uid="uid://s0h15we0ncrc" path="res://Fonts/Minecraftia-Regular.ttf" id="3_bmtiy"]
 [ext_resource type="PackedScene" uid="uid://cx4yjfhjn3b2u" path="res://click_03.tscn" id="5_b42o3"]
 [ext_resource type="PackedScene" uid="uid://ck1gd3ynh83tu" path="res://music.tscn" id="6_3ff64"]
+[ext_resource type="Texture2D" uid="uid://cvbodoimcge6w" path="res://Sprite/sound.png" id="7_fxead"]
+[ext_resource type="Texture2D" uid="uid://b7yx36xn4f8ft" path="res://Sprite/reglage.png" id="8_3br8d"]
+[ext_resource type="Texture2D" uid="uid://qtrr530ytbea" path="res://Sprite/disk_load.png" id="9_ggddq"]
+[ext_resource type="Texture2D" uid="uid://vq5gsy4nmqa0" path="res://Sprite/disk.png" id="10_ppqfd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xibr0"]
 texture = ExtResource("1_dgdct")
@@ -295,6 +299,41 @@ metadata/_edit_use_anchors_ = true
 
 [node name="music" parent="." instance=ExtResource("6_3ff64")]
 volume_db = -13.115
+
+[node name="Sound" type="Sprite2D" parent="."]
+position = Vector2(175, -66)
+scale = Vector2(1.625, 1.4375)
+texture = ExtResource("7_fxead")
+
+[node name="Reglage" type="Sprite2D" parent="."]
+position = Vector2(93, -100)
+scale = Vector2(1.25, 1.1875)
+texture = ExtResource("8_3br8d")
+
+[node name="Reglage2" type="Sprite2D" parent="."]
+position = Vector2(245, -100)
+scale = Vector2(1.25, 1.1875)
+texture = ExtResource("8_3br8d")
+
+[node name="Reglage3" type="Sprite2D" parent="."]
+position = Vector2(245, 15)
+scale = Vector2(1.25, 1.1875)
+texture = ExtResource("8_3br8d")
+
+[node name="Reglage4" type="Sprite2D" parent="."]
+position = Vector2(93, 15)
+scale = Vector2(1.25, 1.1875)
+texture = ExtResource("8_3br8d")
+
+[node name="DiskLoad" type="Sprite2D" parent="."]
+position = Vector2(-15, -42)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_ggddq")
+
+[node name="Disk2" type="Sprite2D" parent="."]
+position = Vector2(-80, -42)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ppqfd")
 
 [connection signal="mouse_entered" from="Panel/GoPanel/GoBtn" to="." method="_on_go_btn_mouse_entered"]
 [connection signal="pressed" from="Panel/GoPanel/GoBtn" to="." method="_on_go_btn_pressed"]

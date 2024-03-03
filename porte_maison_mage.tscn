@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://qudk45vecepp"]
+
+[ext_resource type="Script" path="res://porte_maison_mage.gd" id="1_8ap23"]
+[ext_resource type="Texture2D" uid="uid://bp3oj0myqhbkm" path="res://Sprite/portepierre.png" id="1_ixxde"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clio8"]
+size = Vector2(16, 16)
+
+[node name="porte_maison_mage" type="Area2D"]
+script = ExtResource("1_8ap23")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ixxde")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_clio8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
