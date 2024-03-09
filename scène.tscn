@@ -1171,9 +1171,9 @@ offset_bottom = 101.0
 
 [node name="Commerce" parent="Player/Camera2D" instance=ExtResource("26_sjc0a")]
 visible = false
-offset_top = -55.0
+offset_top = 2.0
 offset_right = 0.0
-offset_bottom = -55.0
+offset_bottom = 2.0
 
 [node name="HearthBar" parent="Player/Camera2D" instance=ExtResource("6_vmeut")]
 anchors_preset = 1
