@@ -1,0 +1,13 @@
+set {End} = 1
+join Magicien 0
+join Player 4
+Magicien: Dans le cimetière des secrets le levier caché est la clé qui éveillera les forces oubliées.
+- Quel force oublié ?
+	Player (Default): De quel force oublié parlé vous?
+	Magicien (Default): Nul ne sait comment la trouver mais je suis sur que tu vas réussir.
+	[wait time="1.0"]
+	Magicien (Default): Au revoir et fait bonne route mon amis.
+- Merci au revoir
+	Player (Default): Merci au revoir !
+	Magicien (Default): De rien fait bonne route mon amis.
+set {End} = 0

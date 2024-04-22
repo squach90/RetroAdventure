@@ -8,17 +8,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	print("Dialogue" + str(Dialogic.VAR.End))
+	if Dialogic.VAR.End == 0:
+		get_node("../Player").can_move = true
+	else:
+		get_node("../Player").can_move = false
 
 
 func _on_body_entered(body):
-	get_node("../Player/Camera2D/Inventory").visible = true
-	get_node("../Player/Camera2D/Inventory").msg_box.visible = true
-	get_node("../Player/Camera2D/Inventory").perso_msg.text = "MAGE" # Replace with function body.
-	get_node("../Player/Camera2D/Inventory").text_msg.text = "Dans le cimetière des secrets\nle levier caché est la clé qui \néveillera les forces oubliées." # Replace with function body.
+	if body.name == "Player":
+		Dialogic.start("Magicien")
+
+	
 
 func _on_body_exited(body):
-	get_node("../Player/Camera2D/Inventory").text_msg.text = "" # Replace with function body. # Replace with function body.
-	get_node("../Player/Camera2D/Inventory").msg_box.visible = false
-	get_node("../Player/Camera2D/Inventory").perso_panel.visible = true
-	get_node("../Player/Camera2D/Inventory").coins_box.visible = true
+	pass
