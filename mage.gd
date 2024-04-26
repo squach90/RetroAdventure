@@ -11,8 +11,10 @@ func _process(delta):
 	print("Dialogue" + str(Dialogic.VAR.End))
 	if Dialogic.VAR.End == 0:
 		get_node("../Player").can_move = true
+		get_node("../ennemies").can_move = true
 	else:
 		get_node("../Player").can_move = false
+		get_node("../ennemies").can_move = false
 
 
 func _on_body_entered(body):

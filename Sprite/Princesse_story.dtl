@@ -1,0 +1,11 @@
+set {End} = 1
+join Princesse 0
+join Player 4
+Princesse (Default): Dans mon royaume, la bravour et la bonté sont les véritables joyaux de ma couronne.
+- Savez-vous où se trouve le cimetière ?
+	Player (Default): Excusez-moi votre majesté, savez-vous où se trouve le cimetière ?
+	Princesse (Default): Bien sûr, il se trouve en haut à gauche de la maison du forgerons.
+- Au revoir ma majesté
+	Player (Default): Au revoir ma magnifique majesté.
+Princesse (Default): Au revoir cher villageois.
+set {End} = 0

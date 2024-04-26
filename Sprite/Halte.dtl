@@ -1,0 +1,11 @@
+set {End} = 1
+join Garde 1
+Garde (Default): HALTE là,vous ne pouvez pas passer
+join Player 4
+- Et pourquoi ?
+	Player (Default): Et pourquoi, je ne pourais pas rentrer ?
+	Garde (Default): Car vous n'êtes pas un membre du chateau.
+- D'accord, au revoir
+	Player (Default): D'accord, au revoir.
+Garde (Default): Au revoir.
+set {End} = 0

@@ -22,11 +22,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Garde": "res://Sprite/Garde.dch",
 "Magicien": "res://Magicien.dch",
-"Player": "res://Sprite/Player.dch"
+"Player": "res://Sprite/Player.dch",
+"Princesse": "res://Princesse.dch"
 }
 directories/dtl_directory={
-"Magicien": "res://Magicien.dtl"
+"Garde": "res://Sprite/Garde.dtl",
+"Halte": "res://Sprite/Halte.dtl",
+"Magicien": "res://Magicien.dtl",
+"Princesse_story": "res://Sprite/Princesse_story.dtl"
 }
 variables={
 "End": 0
